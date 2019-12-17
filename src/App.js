@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+import Contador from './components/Contador';
+
+class App extends Component{
+
+  componentWillMount(){
+    //console.log("componentWillMount");
+  }
+
+  componentDidMount(){
+    //console.log("componentDidMount");
+  }
+
+
+  // metodo que devuelve JSX (eventualmente se convierte en HTML)
+  render(){
+    //console.log('Render');
+    return (
+      <section>
+        <div>
+        </div>
+
+        <Contador/>
+      </section>
+    )
+
+  }
 }
 
 export default App;
